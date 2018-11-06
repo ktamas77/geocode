@@ -1,0 +1,6 @@
+services:
+  hello:
+    app_id: "your_hello_app_id"
+    app_code: "your_hello_app_code"
+  google:
+    api_key: "your_google_api_key"

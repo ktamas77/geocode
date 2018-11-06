@@ -3,7 +3,6 @@ services:
   server:
     build: .
     ports:
-      # external:internal
       - "80:5000"
     environment:
       - FLASK_ENV=development
