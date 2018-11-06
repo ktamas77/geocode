@@ -15,6 +15,6 @@ RUN locale-gen en_US.UTF-8 && update-locale LANG=en_US.UTF-8
 RUN apt-get -y install python
 RUN apt-get -y install python-pip
 RUN pip install --upgrade pip
-RUN pip install flask flask-jsonpify flask-restful requests pyyaml
+RUN pip install requests pyyaml flask flask-jsonpify flask-restful flask-swagger flask-cors
 
 CMD flask run --host=0.0.0.0 --port=5000

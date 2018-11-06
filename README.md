@@ -2,10 +2,14 @@
 Geocoding Service
 
 ### Quick Start
+Before start, please configure the services you'd like to use in the `services/geocoding-services.yml` file by
+adding your api keys.
+
 The application runs in docker, to start, type:
 `./start.sh`
 
 The service will listen to all connections on localhost at standard port 80.
+Swagger will also start at localhost at port 8080 for testing.
 
 ### Endpoints
 There is one endpoint:
@@ -30,6 +34,11 @@ Services listed in the service list configuration file can be implemented in the
 For an example if you called a service `hello` in the config file, the filename should be `services/hello.py`.
 Then in the file one function needs to be created, in `get_location_<service_name>` format.
 The implementation should return with a dictionary with the `Longitude` and `Latitude` parameters or with `None` if the service couldn't be executed.
+
+### Swagger
+Swagger documentation and a Swagger Docker Service added to the Geocoding service, so you can try it in your browser.
+You can access Swagger here:
+`http://localhost:8080`
 
 ### Questions?
 Tamas Kalman <ktamas77@gmail.com>

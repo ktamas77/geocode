@@ -9,3 +9,9 @@ services:
       - FLASK_APP=/var/www/project/server.py
     volumes:
       - ./project:/var/www/project
+  swagger:
+    image: swaggerapi/swagger-ui:v3.0.12
+    environment:
+      API_URL: "http://localhost/swagger.json"
+    ports:
+      - "8080:8080"
